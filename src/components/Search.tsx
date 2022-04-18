@@ -3,9 +3,13 @@ import { Input } from '@chakra-ui/react';
 
 const Search = () => {
     const [search, setSearch] = useState('');
-    console.log(search)
+
+    const handleOnSubmit = (e: any) => {
+        e.preventDefault();
+    }
+
     return (
-        <form>
+        <form onSubmit={handleOnSubmit}>
             <Input
                 type='search'
                 name='search'
