@@ -2,7 +2,7 @@ import { createContext } from 'react'
 
 const defaultValue = {
     coins: [],
-    getCoins: () => {}
+    getCoins: ():any => {}
 }
 
 export const CoinsContext = createContext(defaultValue);

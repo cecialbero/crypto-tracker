@@ -11,6 +11,9 @@ export const CoinsReducer = (state: any, action: CoinsAction) => {
         case CoinsActionType.GET:
             return {
                 ...state,
+                coins: action.payload
             }
+        default:
+            return state
     }
 }
