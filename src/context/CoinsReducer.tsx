@@ -11,7 +11,16 @@ export const CoinsReducer = (state: any, action: CoinsAction) => {
         case CoinsActionType.GET:
             return {
                 ...state,
-                coins: action.payload
+                coins: action.payload,
+                loading: false,
+                error: false
+            }
+        case CoinsActionType.ERROR:
+            return {
+                ...state,
+                coins: action.payload,
+                loading: false,
+                error: true
             }
         default:
             return state

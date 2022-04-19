@@ -1,3 +1,4 @@
 export enum CoinsActionType {
-    GET = 'GET'
+    GET = 'GET',
+    ERROR = 'ERROR'
 }

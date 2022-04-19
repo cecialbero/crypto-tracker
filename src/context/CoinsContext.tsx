@@ -2,6 +2,8 @@ import { createContext } from 'react'
 
 const defaultValue = {
     coins: [],
+    loading: true,
+    error: false,
     getCoins: ():any => {}
 }
 
