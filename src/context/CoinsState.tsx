@@ -22,6 +22,7 @@ const CoinsState = (props: any) => {
             const data = await res.json()
 
             dispatch({type: CoinsActionType.GET, payload: data})
+
         } catch(err) {
             dispatch({type: CoinsActionType.ERROR, payload: []})
         }
