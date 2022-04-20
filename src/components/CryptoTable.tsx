@@ -2,20 +2,17 @@ import { useContext } from 'react'
 import { Table, Tbody, Thead, Tr, Th, TableContainer } from '@chakra-ui/react'
 import { CoinsContext } from '../context/CoinsContext'
 import CoinRow from './CoinRow'
+import Loader from './Loader'
 
 const CryptoTable = () => {
     const coinsContext = useContext(CoinsContext);
-    const { coins, loading, error } = coinsContext;
-
-    if(error) {
-        return <p>No data</p>
-    }
+    const { coins, loading } = coinsContext;
 
     return (
         <>
             {
                 loading
-                ? <p>Loading...</p> 
+                ? <Loader msg={'Loading Coins...'}/> 
                 : <TableContainer>
                     <Table>
                         <Thead>
