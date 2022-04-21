@@ -12,7 +12,7 @@ export const App = () => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Container maxW='900px' marginTop={50} marginBottom={50}>
+      <Container maxW='1000px' marginTop={50} marginBottom={50}>
         <Heading as='h1' size='lg' marginBottom={30}>Top 10 Cryptocurrency Prices by Market Cap</Heading>
         {
           error
