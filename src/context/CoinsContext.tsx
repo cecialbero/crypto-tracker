@@ -4,7 +4,7 @@ const defaultValue = {
     coins: [],
     loading: true,
     error: false,
-    getCoins: ():any => {}
+    getCoins: (pageNumber: number) => {}
 }
 
 export const CoinsContext = createContext(defaultValue);

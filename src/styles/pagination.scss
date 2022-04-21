@@ -1,0 +1,39 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+    ul {
+        display: flex;
+        padding-left: 0;
+
+        li {
+            cursor: pointer;
+            list-style: none;
+            border-top: 1px solid var(--chakra-colors-gray-200);
+            border-bottom: 1px solid var(--chakra-colors-gray-200);
+            border-left: 0.5px solid var(--chakra-colors-gray-200);
+            border-bottom: 0.5px solid var(--chakra-colors-gray-200);
+            padding: 3px 10px;
+            min-width: 32px;
+            text-align: center;
+
+            &:first-child {
+                border-left: 0.5px solid var(--chakra-colors-gray-200);
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            &:last-child {
+                border-right: 0.5px solid var(--chakra-colors-gray-200);
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            &.current {
+                background: var(--chakra-colors-teal-500);
+                color: #fff;
+            }
+        }
+    }
+}

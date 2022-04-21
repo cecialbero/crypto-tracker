@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { ChakraProvider, theme, Container, Heading, Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/react'
 import CryptoTable from './components/CryptoTable'
 import Search from './components/Search'
+import Pagination from './components/Pagination'
 import { CoinsContext } from './context/CoinsContext'
 
 import './App.scss';
@@ -24,6 +25,7 @@ export const App = () => {
           : <>
               <Search />
               <CryptoTable />
+              <Pagination />
             </>
         }
       </Container>
