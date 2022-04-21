@@ -28,5 +28,6 @@ test('must display a table with column headers if coin has value', async () => {
     expect(await screen.findByRole('columnheader', {name: 'Coin'})).toHaveTextContent(/Coin/i)
     expect(await screen.findByRole('columnheader', {name: 'Price'})).toHaveTextContent(/Price/i)
     expect(await screen.findByRole('columnheader', {name: 'Mkt Cap'})).toHaveTextContent(/Mkt Cap/i)
+    expect(await screen.findByRole('columnheader', {name: '24h'})).toHaveTextContent(/24h/i)
     expect(await screen.findByRole('table', {name: ''})).toBeInTheDocument()
 })

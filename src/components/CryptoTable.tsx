@@ -21,8 +21,8 @@ const CryptoTable = () => {
                                 <Th>Coin</Th>
                                 <Th></Th>
                                 <Th isNumeric>Price</Th>
+                                <Th isNumeric>24h</Th>
                                 <Th isNumeric>Mkt Cap</Th>
-                                <Th></Th>
                             </Tr>
                         </Thead>
                         <Tbody>
