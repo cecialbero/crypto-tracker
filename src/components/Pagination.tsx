@@ -2,9 +2,18 @@ import { useContext, useState } from 'react'
 import { CoinsContext } from '../context/CoinsContext'
 import '../styles/pagination.scss'
 
-const Pagination = () => {
+interface PaginationProps {
+    totalPages: number
+}
+
+const Pagination = ({totalPages}: PaginationProps): JSX.Element => {
     const [currentPage, setCurrentPage] = useState(1)
-    const [totalPages] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    const [pages, setPages] = useState<Array<Number>>([])
+
+    while(pages.length < totalPages) {
+        setPages([...pages, totalPages])
+        totalPages--
+    }
 
     const coinsContext = useContext(CoinsContext)
 
@@ -16,8 +25,9 @@ const Pagination = () => {
     return (
         <div className='pagination'>
             <ul>
-                {totalPages.map((page, i) => (
+                {pages.map((page, i) => (
                         <li 
+                            key={i}
                             onClick={() => onClickPagination(i+1)}
                             className={i+1 === currentPage ? 'current' : ''}
                         >{page}</li>

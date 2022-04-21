@@ -25,7 +25,7 @@ export const App = () => {
           : <>
               <Search />
               <CryptoTable />
-              <Pagination />
+              <Pagination totalPages={10}/>
             </>
         }
       </Container>
